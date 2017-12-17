@@ -14,7 +14,7 @@ import UIKit
 
 protocol ConversionPresentationLogic {
     func presentConvertedValue(response: Conversion.Length.Response)
-    func presentConvertionError(response: Conversion.Length.Error)
+    func presentconversionError(response: Conversion.Length.Error)
 }
 
 class ConversionPresenter: ConversionPresentationLogic {
@@ -32,7 +32,7 @@ class ConversionPresenter: ConversionPresentationLogic {
     }
     
     // MARK: Present error
-    func presentConvertionError(response: Conversion.Length.Error) {
+    func presentconversionError(response: Conversion.Length.Error) {
         let viewModel = Conversion.Length.ViewModel(formattedValue: response.message)
         viewController?.displayConversion(viewModel: viewModel)
     }

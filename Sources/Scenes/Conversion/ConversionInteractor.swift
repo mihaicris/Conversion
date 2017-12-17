@@ -31,14 +31,14 @@ class ConversionInteractor: ConversionBusinessLogic, ConversionDataStore {
         // Check if input is not empty
         guard let valueString = request.valueString, valueString.count > 0 else {
             let response = Conversion.Length.Error(message: "Error: Input is empty.")
-            presenter?.presentConvertionError(response: response)
+            presenter?.presentconversionError(response: response)
             return
         }
         
         // Check if input is valid number
         guard let valueToConvert = Double(valueString) else {
             let response = Conversion.Length.Error(message: "Error: Input is not a valid number.")
-            presenter?.presentConvertionError(response: response)
+            presenter?.presentconversionError(response: response)
             return
         }
         
